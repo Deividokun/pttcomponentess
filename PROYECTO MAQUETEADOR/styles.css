@@ -1,0 +1,270 @@
+@font-face {
+  font-family: 'roboto';
+  src: url(/assets/fonts/Roboto/Roboto-Regular.ttf);
+  font-style: normal;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'roboto';
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.menu_des {
+  display: none;
+}
+.list_nav > li > a:hover {
+  font-size: 22px;
+}
+header > img {
+  width: 12.5rem;
+  text-align: center;
+}
+header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.125rem;
+  flex-wrap: wrap;
+}
+body {
+  background-color: rgb(255, 255, 255);
+}
+nav {
+  width: 30%;
+}
+.list_nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-weight: bolder;
+  gap: 0.3125rem;
+}
+.image_list {
+  display: grid;
+  width: 95%;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: auto;
+  gap: 1.875rem;
+  transition: transform 0.5s;
+}
+.image_list > img:hover {
+  border: solid 2px black;
+  transform: scale(1.1);
+}
+.image_list > img:nth-child(1) {
+  transform: none;
+}
+.image_list > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-fit: cover;
+  border-radius: 10%;
+}
+.image_list > img:nth-child(1) {
+  grid-column: 1/7;
+  grid-row: 1/1;
+}
+
+.discounts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  gap: 1.25rem;
+}
+h3 {
+  font-size: 2em;
+}
+.discounts_list {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 50px;
+}
+.computers {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.title_computers {
+  font-size: 2em;
+  text-align: center;
+}
+
+.list_of_computers {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.25rem;
+  text-align: center;
+  padding: 100px;
+}
+.list_computers {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 20px;
+}
+.list_computers > img {
+  width: 100%;
+  object-fit: contain;
+  object-position: cover;
+}
+.list_computers > a {
+  padding: 0.625rem 1.25rem 0.625rem 1.25rem;
+  border-radius: 17%;
+  width: 100px;
+  align-self: center;
+  background-color: #8eadd5;
+  border: none;
+  color: black;
+  font-weight: bold;
+  margin-top: 1.25rem;
+}
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  background-color: aliceblue;
+  text-transform: uppercase;
+}
+.footer_list > li:nth-child(1) {
+  font-weight: bolder;
+}
+.footer_list > li {
+  padding: 10px;
+  width: 200px;
+}
+@media only screen and (max-width: 435px) {
+  .search {
+    display: none;
+  }
+  header {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    gap: 1.25rem;
+    align-content: space-around;
+  }
+  nav {
+    display: none;
+  }
+  .menu_des {
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+  .image_list > img:nth-child(1) {
+    display: none;
+  }
+  .image_list {
+    width: 100%;
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0.625rem;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  .discounts_list {
+    display: block;
+  }
+  .computers {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem;
+    flex-direction: column;
+  }
+  .list_of_computers {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 436px) and (max-width: 820px) {
+  .search {
+    display: none;
+  }
+  header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3.125rem;
+    align-content: space-around;
+  }
+  nav {
+    display: none;
+  }
+  header > img {
+    width: 100px;
+    width: 50%;
+  }
+  .menu_des {
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+  .image_list > img:nth-child(1) {
+    display: none;
+  }
+  .image_list {
+    width: 70%;
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    transition: none;
+    gap: 3.125rem;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  .discounts_list {
+    display: block;
+  }
+  .computers {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .list_of_computers {
+    grid-template-columns: 1fr;
+  }
+  footer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0;
+    align-items: center;
+  }
+}
